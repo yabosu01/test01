@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>다음화면 만들기 연습01</title>
+		<style>
+			/* reset.css */
+			* { margin:0; padding:0; }
+			li { list-style-type:none; }
+			a { color:#333; text-decoration:none; }
+			a:hover { text-decoration:underline; }
+			img { border:none; }
+			
+			body { font-size:12px; font-family:돋움; color:#333; } /* 16px=12pt=M=100%=1em */ 
+			
+			#wrapper { width:980px; margin:0 auto; outline:1px solid red; }
+			
+			/* header */
+			#header {}
+				#header h1, dt, dd { float:left; }
+				dt a { float:left; /* display:inline-block; display:block;*/ text-indent:-999px;  width:130px; height:39px; 
+				background:url(images/media.gif) no-repeat;
+				/*
+					background-image:url(images/media.gif); 
+					background-repeat:no-repeat;
+					background:배경색 배경이미지 반복여부 고정여부 위치/사이즈
+					*/
+				/* a는 인라인레벨의 요소이므로 폭, 높이, 위아래여백 사용할 수 없으므로 블럭레베의 요소로 바꾸기 위해 float:left; display:inline-block; display:block; 명령중 하나를 사용한다. */}
+				dd a { float:left; height:39px; background-repeat:no-repeat; text-indent:-999px; }
+				dd:nth-of-type(1) a { width:58px; background-image:url(images/menuTopSports.gif); }
+				dd:nth-of-type(2) a { width:57px; background:url(images/menuTopAgora.gif); }		
+				dd:nth-of-type(3) a { width:83px; background:url(images/menuTopMan.gif); }		
+				dd:nth-of-type(4) a { width:55px; background:url(images/menuTopView.gif); }		
+				
+				#mainNavi { clear:both; overflow:hidden; /* height:50px; float:left; */ background-color:blue; } /* clear:both; - 현재 위에 있는 dt, dd의 float에 의해 생긴 공백으로 올라는것을 해제 */
+					#mainNavi a { display:block; padding:10px; color:#fff; font-weight:bold; }
+					#mainNavi li { float:left; }
+					.navLeft { float:left; }
+					.navRight { float:right; }
+			/* contents */
+			#contents { overflow:hidden; }
+				#left { float:left; width:118px; height:200px; background-color:pink; }
+				#center { float:left; width:592px; height:400px; background-color:yellow; margin:0 10px; }
+				#right { float:left; width:250px; height:200px; background-color:skyblue; }
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<h1><a href="index.html"><img src="images/logo.gif" alt="다음로고 이미지"></a></h1>
+				<dl>
+					<dt><a href="#">미디어다음</a></dt>
+					<dd><a href="#">스포츠</a></dd>
+					<dd><a href="#">아고라</a></dd>
+					<dd><a href="#">만화속세상</a></dd>
+					<dd><a href="#">view</a></dd>
+				</dl>
+				<div id="mainNavi">
+					<ul class="navLeft">						
+						<li><a href="#">뉴스홈</a></li>
+						<li><a href="#">속보</a></li>
+						<li><a href="#">사회</a></li>
+						<li><a href="#">정치</a></li>
+						<li><a href="#">경제</a></li>
+						<li><a href="#">국제</a></li>
+						<li><a href="#">문화/생활</a></li>
+						<li><a href="#">연예</a></li>
+						<li><a href="#">IT/과학</a></li>
+						<li><a href="#">포토</a></li>
+						<li><a href="#">TV</a></li>
+						<li><a href="#">매거진</a></li>
+					</ul>
+					<ul class="navRight">
+						<li><a href="#">뉴스통계</a></li>
+						<li><a href="#">언론사뉴스</a></li>
+						<li><a href="#">사설</a></li>
+					</ul>
+				</div>
+			</div> <!-- header 끝 -->
+			
+			<div id="contents">
+				<div id="left"></div>
+				<div id="center"></div>
+				<div id="right"></div>
+			</div> <!-- contents 끝 -->
+			
+			<div id="footer">
+				<ul>
+					<li><a href="#">서비스 약관/정책</a><span>|</span></li>
+					<li><a href="#">광고안내</a><span>|</span></li>
+					<li><a href="#">권리침해신고</a></li>
+				</ul>
+				<small>
+					Copyright &copy; Daum Communications. All rights reserved. 위 내용에 대한 저작권 및 법적 책임은 자료제공사 또는 글씬이에 있으며 Daum의 입장과 다를 수 있습니다.
+				</small>
+			</div> <!-- footer 끝 -->
+		</div> <!-- wrapper 끝 -->
+	</body>
+</html>
+
+
+
+
+
+
+
+
